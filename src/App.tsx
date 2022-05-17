@@ -24,7 +24,7 @@ function Box({
       className={className}
       onClick={onClick}
     >
-      {text}
+      <div className={styles.box}>{text}</div>
     </div>
   );
 }
@@ -37,9 +37,9 @@ export default function App() {
     "green",
     "orange",
     "crimson",
-    "gold",
+    "purple",
     "red",
-    "yellow",
+    "magenta",
   ];
 
   const shuffledColors = () => {
@@ -56,61 +56,73 @@ export default function App() {
   };
 
   return (
-    <>
-      <Box
-        text="1"
-        color={colors[0]}
-        className={styles.box1}
-        onClick={shuffleColors}
-      />
-      <Box
-        text="2"
-        color={colors[1]}
-        className={styles.box1}
-        onClick={shuffleColors}
-      />
-      <Box
-        text="3"
-        color={colors[2]}
-        className={styles.box2}
-        onClick={shuffleColors}
-      />
-      <Box
-        text="4"
-        color={colors[3]}
-        className={styles.box3}
-        onClick={shuffleColors}
-      />
-      <Box
-        text="5"
-        color={colors[4]}
-        className={styles.box4}
-        onClick={shuffleColors}
-      />
-      <Box
-        text="6"
-        color={colors[5]}
-        className={styles.box1}
-        onClick={shuffleColors}
-      />
-      <Box
-        text="7"
-        color={colors[6]}
-        className={styles.box5}
-        onClick={shuffleColors}
-      />
-      <Box
-        text="8"
-        color={colors[7]}
-        className={styles.box6}
-        onClick={shuffleColors}
-      />
-      <Box
-        text="9"
-        color={colors[8]}
-        className={styles.box7}
-        onClick={shuffleColors}
-      />
-    </>
+    <div className={styles.page}>
+      <div className={styles.boxes1234}>
+        <Box
+          text="1"
+          color={colors[0]}
+          className={styles.box1}
+          onClick={shuffleColors}
+        />
+        <div className={styles.boxes234}>
+          <Box
+            text="2"
+            color={colors[1]}
+            className={styles.box2}
+            onClick={shuffleColors}
+          />
+          <div className={styles.boxes34}>
+            <Box
+              text="3"
+              color={colors[2]}
+              className={styles.box3}
+              onClick={shuffleColors}
+            />
+            <Box
+              text="4"
+              color={colors[3]}
+              className={styles.box4}
+              onClick={shuffleColors}
+            />
+          </div>
+        </div>
+      </div>
+      <div className={styles.boxes56789}>
+        <div className={styles.boxes56}>
+          <Box
+            text="5"
+            color={colors[4]}
+            className={styles.box5}
+            onClick={shuffleColors}
+          />
+          <Box
+            text="6"
+            color={colors[5]}
+            className={styles.box6}
+            onClick={shuffleColors}
+          />
+        </div>
+        <Box
+          text="7"
+          color={colors[6]}
+          className={styles.box7}
+          onClick={shuffleColors}
+        />
+        <div className={styles.boxes89}>
+          <Box
+            text="8"
+            color={colors[7]}
+            className={styles.box8}
+            onClick={shuffleColors}
+          />
+          <Box
+            text="9"
+            color={colors[8]}
+            className={styles.box9}
+            onClick={shuffleColors}
+          />
+        </div>
+      </div>
+    </div>
   );
 }
