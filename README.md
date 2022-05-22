@@ -1,7 +1,7 @@
 # Color Change Boxes
 A very simple demonstration of responsive web-page layout and reactive web design.
 
-The grid of boxes adapts layout according to screen width, with one of two layouts being used based on a width cut-off of 600px.
+The grid of boxes adapts layout according to screen width, with one of two layouts being used based on a screen width cut-off of 600px.
 
 Clicking on any box shuffles the colors of all boxes using a pre-defined list of colors.
 
